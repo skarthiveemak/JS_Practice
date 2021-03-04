@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function myfunction(){
+
+			var name=document.getElementById('name').value;
+			var age=document.getElementById('age').value;
+			var nationality=document.getElementById('nationality').value;
+			var gender=document.getElementById('gender').value;
+
+
+				if (age <= 20) {
+					document.write("you should 20 to vote")
+				} else {
+					document.write("congts you are eligible")
+					document.write("<br>")
+					
+				}
+
+				if (nationality != 'indian') {
+					document.write("<br>")
+					document.write('You shold be indian')
+				} else {
+					document.write("<br>")
+					document.write("nice you are indian")
+				}
+
+				if (gender != 'male') {
+					document.write("<br>")
+					document.write("only male !!")
+				} else {
+					document.write("<br>")
+					document.write("you are male super!!")
+				}
+			
+				
+				
+				
+			
+			document.write("<br>")
+			document.write(name)
+			console.log(gender)
+		}
+			
+		</script>
+	</head>
+
+<body>
+	<form>
+		<div>
+			<label for="name">name</label>
+			<input name="name" id="name" type="text">
+		</div>
+
+
+		<div>
+			<label for="age">age</label>
+			<input id="age" name="age" type="text">
+		</div>
+
+
+		<div>
+			<label for="nationality">nationality</label>
+			<input id="nationality" name="nationality" type="text">
+		</div>
+
+		<div>
+			<label for="gender">Gender</label>
+			<input id="gender" name="gender" type="text">
+		</div>
+
+		<button type="submit" onclick=myfunction()>Submit</button>
+	</form>
+	
+</body>
+
+</html>
