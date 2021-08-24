@@ -1,16 +1,24 @@
 let numbersarray = [
-    {number: 550441, name: 'siva'}, 
+    {number: 5441, name: 'siva'}, 
     {number :920215,name: 'karthi'},
-    {number:103027,name: 'keyan'} 
+    {number:27,name: 'keyan'} 
    ]
 
-let datas = [];
 
-numbersarray.forEach( function output (item){
-   debugger
-   datas.push(item)
-   console.log(datas)
-});
+function comparefunction (a,b) {
+  debugger
+  if(a.name < b.name){
+    return -1
+  }
+  else if(a.name > b.name){
+    return 1
+  }
+  return 0
+}
+
+numbersarray.sort(comparefunction);
+
+console.log(numbersarray);
 
 
 
