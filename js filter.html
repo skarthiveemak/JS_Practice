@@ -23,13 +23,33 @@ console.log(result);
     {name: 'Philadelphia', population: 1526006}
 ];
 
+//loops
+
 let bigCities = [];
 for (let i = 0; i < cities.length; i++) {
     if (cities[i].population > 3000000) {
         bigCities.push(cities[i].name);
     }
 }
-console.log(" asdf" + bigCities); 
+// console.log(" asdf" + bigCities); 
+
+// array
+let mariboys = [
+        { Rollno: 2,  Name: "Aravind" },
+        { Rollno: 28, Name: "Sivakarthikeyan" }, 
+        { Rollno: 19, Name: "Purushothaman" }, 
+        { Rollno: 52, Name: "Tamil vendhan" }
+        ]
+// array filter
+let roommate = mariboys.filter(function(element){
+        return element.Rollno == 2;
+})
+// console.log(roommate)
+
+// array map
+
+
+
 </script>
 
 </head>

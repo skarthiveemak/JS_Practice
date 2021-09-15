@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+</body>
+<script>
+    function updateTime(){
+        
+        var fullDate = new Date();
+
+        let HH = fullDate.getHours();
+        let MM = fullDate.getMinutes();
+        let SS = fullDate.getSeconds();
+
+        HH = (HH < 10 ) ? "0" + HH : HH;
+        MM = (MM < 10 ) ? "0" + MM : MM;
+        SS = (SS < 10 ) ? "0" + SS : SS;
+
+        let time = `${HH}:${MM}:${SS}`;
+        document.querySelector('#time').innerText = time;
+        setTimeout(updateTime, 1000);        
+    }
+
+    function updateDate(){
+        
+        var fullDate = new Date();
+        var monthList = ['January','February',
+                        'March','April','May',
+                        'June','July','August',
+                    'September','October','November',
+                'December'];
+        
+        var year = fullDate.getFullYear();
+        var month = monthList[fullDate.getMonth()];
+        var date = fullDate.getDate();
+        let today = `${month} ${date} ${year}`;
+        document.querySelector('#date').innerText = today
+    }
+
+    updateTime();
+    updateDate();
+</script>
+
+</html>
